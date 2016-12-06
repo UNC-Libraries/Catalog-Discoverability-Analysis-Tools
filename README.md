@@ -83,3 +83,11 @@ For each record listed in the output from the 2nd script, this script grabs data
 Format for the Endeca full record XML: 
 
 http://search.lib.unc.edu/search?R=UNC{{BNUM}}&output-format=xml&record-options=include-record-facets
+
+URL format for the Syndetics API:
+
+http://syndetics.com/index.aspx?isbn={{ISBN}}&oclc={{OCLC number}}&upc={{UPC}}/XML.XML&client=ncchapelh
+
+The script parses the XML of the Endeca XML web services API to find identifiers (ISBNs, OCLC number, UPC) that can be used to construct a URL for the Syndetics API. The script then parses the Syndetics XML to determine what kind of data is and is not returned. Results are appended to the .CSV file created by the second script.
+
+The resulting .CSV can then be analyzed in Microsoft Excel or imported into a Microsoft Access database.
