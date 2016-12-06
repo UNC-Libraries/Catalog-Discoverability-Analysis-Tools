@@ -86,7 +86,7 @@ http://search.lib.unc.edu/search?R=UNC{{BNUM}}&output-format=xml&record-options=
 
 URL format for the Syndetics API:
 
-http://syndetics.com/index.aspx?isbn={{ISBN}}&oclc={{OCLC number}}&upc={{UPC}}/XML.XML&client=ncchapelh
+http://syndetics.com/index.aspx?isbn={{ISBN}}&oclc={{OCLCnumber}}&upc={{UPC}}/XML.XML&client=ncchapelh
 
 The script parses the XML of the Endeca XML web services API to find identifiers (ISBNs, OCLC number, UPC) that can be used to construct a URL for the Syndetics API. The script then parses the Syndetics XML to determine what kind of data is and is not returned. Results are appended to the .CSV file created by the second script.
 
