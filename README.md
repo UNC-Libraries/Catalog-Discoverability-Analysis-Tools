@@ -75,8 +75,8 @@ perl ecoll_catalog_eval_2.pl path/to/collection_list_file_bibs.csv
 path/to/collection_list_file_ils.csv
 ```
 
-### Run third script
-For each record listed in the output from the 2nd script, this script grabs data from: 
+### Run third script -- endeca_parser_syn_checker.py
+First, rename the output file from the second Perl script to input_file.csv For each record listed in input_file.csv, this third script grabs data from: 
 * the Endeca XML web services API for the full record view
 * a series of calls to the Syndetics API
 
@@ -90,4 +90,4 @@ http://syndetics.com/index.aspx?isbn={{ISBN}}&oclc={{OCLCnumber}}&upc={{UPC}}/XM
 
 The script parses the XML of the Endeca XML web services API to find identifiers (ISBNs, OCLC number, UPC) that can be used to construct a URL for the Syndetics API. The script then parses the Syndetics XML to determine what kind of data is and is not returned. Results are appended to the .CSV file created by the second script.
 
-The resulting .CSV can then be analyzed in Microsoft Excel or imported into a Microsoft Access database.
+The resulting file (output_file.csv) can then be analyzed in Microsoft Excel or imported into a Microsoft Access database.
